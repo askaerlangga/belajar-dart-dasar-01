@@ -2,7 +2,7 @@ class RekeningBank{
   //Properties
   String? namaPemilik;
   String? namaBank;
-  int? saldo;
+  int saldo;
 
   //Function atau Methods
   printDataRekening(){ 
@@ -14,6 +14,11 @@ class RekeningBank{
 
   //Constructor
   RekeningBank({this.namaPemilik,this.namaBank,this.saldo = 0});
+
+  //Multiple Constructor
+  RekeningBank.bankJago({required this.namaPemilik,this.namaBank = 'Bank Jago',this.saldo = 0});
+  RekeningBank.bankBCA({required this.namaPemilik,this.namaBank = 'Bank BCA',this.saldo = 0});
+
 }
 
 void main(){
@@ -35,4 +40,9 @@ void main(){
   rekeningAska.printDataRekening();
   rekeningEdo.printDataRekening();
   rekeningFajar.printDataRekening();
+
+  RekeningBank rekeningAska2 = RekeningBank.bankJago(namaPemilik: 'Aska Erlangga');
+  rekeningAska2.printDataRekening();
+  RekeningBank rekeningAska3 = RekeningBank.bankBCA(namaPemilik: 'Aska Erlangga');
+  rekeningAska3.printDataRekening();
 }
