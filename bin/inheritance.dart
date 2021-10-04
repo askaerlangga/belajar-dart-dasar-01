@@ -4,9 +4,12 @@ void main(){
 
   mobilAska.spesifikasiKendaraan();
   motorAska.spesifikasiKendaraan();
+  
 }
 
-class Kendaraan {
+//Tidak bisa dibuat object
+//Digunakan untuk diwariskan ke class lain
+abstract class Kendaraan {
   String suaraKlakson = "Tin!";
   String warnaPlatNomor = "Hitam";
   void klakson(){
@@ -16,8 +19,14 @@ class Kendaraan {
   void spesifikasiKendaraan(){
     print('Warna plat Nomor : $warnaPlatNomor');
     print('Suara klakson : $suaraKlakson');
+    kondisiKendaraan();
   }
+
+  void kondisiKendaraan();
 }
+
+//Contoh Object abstract class :
+// Kendaraan mobilBaru = Kendaraan(); //Error
 
 //Terhubung dengan properties dan function yang ada pada parrent nya
 class Mobil extends Kendaraan{
@@ -39,6 +48,11 @@ class Mobil extends Kendaraan{
     print('Jumlah roda : $roda');
     super.spesifikasiKendaraan();
   }
+
+  @override
+  void kondisiKendaraan(){
+    print('Kondisi OKE!');
+  }
 }
 
 class Motor extends Kendaraan {
@@ -54,5 +68,10 @@ class Motor extends Kendaraan {
     print('Tipe : $tipe');
     print('Jumlah roda : $roda');
     super.spesifikasiKendaraan();
+  }
+
+  @override
+  void kondisiKendaraan(){
+    print('Kondisi BAD!');
   }
 }
