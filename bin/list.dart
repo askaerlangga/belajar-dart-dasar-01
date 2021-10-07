@@ -54,6 +54,12 @@ void main(){
   nama.removeLast();
   print(nama);
 
+  List<int> angka = [1,2,3];
+  List<int> angka2 = [4,5,6];
+  //Menambahkan semua data yang ada di list angka2 ke list angka
+  angka.addAll(angka2);
+  print(angka);
+
   
 
 }
