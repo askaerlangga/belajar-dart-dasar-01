@@ -60,6 +60,10 @@ void main(){
   angka.addAll(angka2);
   print(angka);
 
+  //Menghapus pada nomor index tertentu
+  angka.removeAt(1);
+  print(angka);
+
   
 
 }
