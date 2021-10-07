@@ -17,6 +17,10 @@ void main(){
   nama.add('Rifai');
   print(nama);
 
+  //Menyisipkan data di list pada index nomor 2
+  nama.insert(2, 'Dito');
+  print(nama);
+
   //Bisa juga dengan cara ini
   //Tidak perlu mendeklarasikan tipe data
   var kota = ['Serang','Cilegon','Tangerang'];
