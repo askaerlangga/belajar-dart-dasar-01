@@ -64,6 +64,10 @@ void main(){
   angka.removeAt(1);
   print(angka);
 
+  //Menghapus pada rentang index nomor 2 - 4
+  angka.removeRange(2, 4);
+  print(angka);
+
   
 
 }
